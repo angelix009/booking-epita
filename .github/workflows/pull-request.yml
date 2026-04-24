@@ -44,9 +44,9 @@ jobs:
         uses: google/osv-scanner-action/osv-reporter-action@v2.3.5
         with:
           scan-args: |-
-            --output DependenciesAnalysisDiff.sarif
-            --old DependenciesAnalysisBefore.sarif
-            --new DependenciesAnalysisAfter.sarif
+            --output-files=sarif:DependenciesAnalysisDiff.sarif
+            --old=DependenciesAnalysisBefore.sarif
+            --new=DependenciesAnalysisAfter.sarif
 
       - name: save differential report
         if: always()
