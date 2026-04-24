@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Booking Creel House
 
 # Getting Started
@@ -21,3 +22,6 @@ Tasks to solve this hands on:
 - [ ] Configure Cookie with same site attribute
 - [ ] Mask credit card number
 - [ ] Encrpt credit card number
+=======
+# booking-epita
+>>>>>>> ff1ab7e0e78ddf0ad44bcf71d40634379d347832
