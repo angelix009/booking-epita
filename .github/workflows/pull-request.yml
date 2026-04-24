@@ -23,7 +23,7 @@ jobs:
         with:
           scan-args: |-
             --format=sarif
-            --output=DependenciesAnalysisAfter.sarif
+            --output-file=DependenciesAnalysisAfter.sarif
             ./
         continue-on-error: true
 
@@ -36,7 +36,7 @@ jobs:
         with:
           scan-args: |-
             --format=sarif
-            --output=DependenciesAnalysisBefore.sarif
+            --output-file=DependenciesAnalysisBefore.sarif
             ./
         continue-on-error: true
 
