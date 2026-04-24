@@ -47,9 +47,9 @@ jobs:
             --output DependenciesAnalysisDiff.sarif
             --old DependenciesAnalysisBefore.sarif
             --new DependenciesAnalysisAfter.sarif
-        continue-on-error: true
 
       - name: save differential report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: DependenciesAnalysisDiff
@@ -67,9 +67,9 @@ jobs:
 
       - name: run semgrep differential analysis
         run: semgrep scan --config .semgrep --sarif --output SourceCodeAnalysisDiff.sarif --baseline-commit ${{ github.event.pull_request.base.sha }} .
-        continue-on-error: true
 
       - name: save differential report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: SourceCodeAnalysisDiff
